@@ -118,6 +118,7 @@ export default function WakaStats({ onBack }: WakaStatsProps) {
     });
   }, []);
 
+  // @ts-ignore
   return (
     <div className="container" style={{ padding: '20px', maxWidth: '850px' }}>
       <div className="terminal-header" style={{ borderBottom: '1px dashed #333', paddingBottom: '10px', marginBottom: '20px' }}>
@@ -177,7 +178,7 @@ export default function WakaStats({ onBack }: WakaStatsProps) {
             <div>
               <h3 style={{ color: '#fff', fontSize: '14px', marginBottom: '15px', borderBottom: '1px solid #222', paddingBottom: '8px' }}>top languages</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {stats.languages.slice(0, 5).map(lang => (
+                {stats.languages.slice(0, 7).map(lang => (
                   <div key={lang.name} style={{ display: 'flex', alignItems: 'center', fontSize: '13px' }}>
                     <span style={{ width: '110px', color: '#c9c9c9', fontWeight: '500' }}>{lang.name}</span>
                     
@@ -195,8 +196,11 @@ export default function WakaStats({ onBack }: WakaStatsProps) {
             </div>
             
             {/* БЛОК 3: Инструменты */}
+            {/* TODO: разобраться с тем как красиво поставить IDE где я пишу код / узнать что будет если приложух будет меньше 5 */}
             <div style={{ color: '#666', fontSize: '12px', marginTop: '10px', padding: '15px', backgroundColor: '#080808', border: '1px dashed #222', borderRadius: '4px' }}>
-              <span style={{ color: '#4caf50' }}>&gt;</span> Editor: <span style={{ color: '#fff' }}>{stats.editors[0]?.name || 'Unknown'}</span> ({stats.editors[0]?.percent || 0}%)
+              <span style={{ color: '#4caf50' }}>&gt;</span> Editors:
+
+              <span style={{ color: '#fff', paddingLeft: 'inherit'}}>{stats.editors[0]?.name || 'Unknown'}</span> ({stats.editors[0]?.percent || 0}%)
             </div>
 
           </div>
