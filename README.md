@@ -1,7 +1,7 @@
-# 💻 root@v4mp.dev :~$
+# 💻 root@sirenko.tech :~$
 
 > **An interactive, terminal-themed personal portfolio and dashboard (v2.0).**
-> Live at: [v4mp.dev](https://v4mp.dev)
+> Live at: [sirenko.tech](https://sirenko.tech)
 
 This is a fully dynamic Single Page Application (SPA) dashboard built with **React** and **TypeScript**. It connects to multiple APIs in real-time to display my current status, what I'm listening to, and my coding statistics, with instant component rendering and zero page reloads.
 
