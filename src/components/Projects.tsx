@@ -104,7 +104,7 @@ export default function Projects({ onBack }: ProjectsProps) {
       {/* 2. v4mp react */}
       <div className="project-card">
         <div className="project-header">
-          <a href="https://v4mp.dev" className="project-name">v4mp v2 (React)</a>
+          <a href="https://sirenko.tech" className="project-name">sirenko.tech | before - v4mp.dev</a>
           <span className="project-year">2026</span>
         </div>
         <div className="project-desc">interactive web-terminal SPA</div>

@@ -62,7 +62,7 @@ export default function App() {
           </pre>
           
           <div className="command-line">
-            <span className="prompt">root@v4mp.dev</span>{' '} 
+            <span className="prompt">root@sirenko.tech</span>{' '}
             <span className="command"
               onClick={() => setIsHeartOpen(true)}
               style={{ cursor: 'pointer', transition: 'text-shadow 0.3s' }}
@@ -78,13 +78,13 @@ export default function App() {
               <img src="/avatar.png" alt="my profile picture" />
             </div>
             <div className="bio-text">
-            b/e dev / staying lowkey. mostly just keeping uptime high tbh.<br />
+            s/e dev / staying lowkey. mostly just keeping uptime high tbh.<br />
               <span onClick={() => setCurrentPage('projects')} className="projects-title-link" style={{cursor: 'pointer'}}>experience / projects</span>
             </div>
           </div>
 
           <div className="command-line mt-40">
-            <span className="prompt">root@v4mp.dev</span> <span className="command">./socials.sh</span>
+            <span className="prompt">root@sirenko.tech</span> <span className="command">./socials.sh</span>
           </div>
 
           {/* СОЦСЕТИ */}
@@ -92,7 +92,7 @@ export default function App() {
             <li>
               <a href="https://t.me/dxrge" target="_blank" rel="noreferrer">
                 <svg viewBox="0 0 48 48" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="currentColor"></path> </g></svg>
-                <TypingText text="md" delay={300} />
+                <TypingText text="sirenko" delay={300} />
                   </a>
                 <TelegramStatus />
             </li>
@@ -102,7 +102,7 @@ export default function App() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.128 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.106c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.331c-1.18 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.085 2.176 2.419 0 1.333-.966 2.419-2.176 2.419zm7.975 0c-1.18 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.085 2.176 2.419 0 1.333-.966 2.419-2.176 2.419z"/>
                 </svg>
-                <TypingText text="emotype666" delay={800} />
+                <TypingText text="usdtriches" delay={800} />
                 </a>
               <DiscordStatus />
             </li>
@@ -122,7 +122,7 @@ export default function App() {
                 <svg fill="currentColor" height="18px" width="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 504.4 504.4" xmlSpace="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M377.6,0.2H126.4C56.8,0.2,0,57,0,126.6v251.6c0,69.2,56.8,126,126.4,126H378c69.6,0,126.4-56.8,126.4-126.4V126.6 C504,57,447.2,0.2,377.6,0.2z M168,408.2H96v-208h72V408.2z M131.6,168.2c-20.4,0-36.8-16.4-36.8-36.8c0-20.4,16.4-36.8,36.8-36.8 c20.4,0,36.8,16.4,36.8,36.8C168,151.8,151.6,168.2,131.6,168.2z M408.4,408.2H408h-60V307.4c0-24.4-3.2-55.6-36.4-55.6 c-34,0-39.6,26.4-39.6,54v102.4h-60v-208h56v28h1.6c8.8-16,29.2-28.4,61.2-28.4c66,0,77.6,38,77.6,94.4V408.2z"></path> </g> </g> </g></svg>
                 <TypingText text="ivan sirenko" delay={1800} />
                 </a>
-              <span id="linkedin">[work]</span>
+              <span id="linkedin">[intern]</span>
             </li>
 
             <EmailWidget />

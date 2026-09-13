@@ -17,7 +17,7 @@ export default function EmailWidget() {
     setHasSwitched(true);
   };
 
-  const emailText = region === 'eu' ? 'i@v4mp.eu' : 'i@v4mp.us';
+  const emailText = region === 'eu' ? 'i@sirenko.eu' : 'i@sirenko.us';
 
 	return (
 		<li style={{ display: 'flex', alignItems: 'center' }}> 

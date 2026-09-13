@@ -78,7 +78,7 @@ import { useState, useEffect } from 'react';
 		return (
 	<div className="status-panel">
 		<div className="command-line">
-			<span className="prompt">root@v4mp.dev</span>
+			<span className="prompt">root@sirenko.tech</span>
 			<span className="command"> music --now-playing</span>
 		</div>
 

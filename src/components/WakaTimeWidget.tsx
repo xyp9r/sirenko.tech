@@ -123,7 +123,7 @@ export default function WakaTimeWidget({ onOpenStats }: WakaTimeWidgetProps) {
 			className="status-panel"
 		>
               <div className="command-line">
-                <span className="prompt">root@v4mp.dev</span> <span className="command">wakatime --today</span>
+                <span className="prompt">root@sirenko.tech</span> <span className="command">wakatime --today</span>
               </div>
               <div className="panel-box wakatime-clickable-box"
               onClick={onOpenStats}
