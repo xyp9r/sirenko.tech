@@ -79,7 +79,7 @@ import { useState, useEffect } from 'react';
 	<div className="status-panel">
 		<div className="command-line">
 			<span className="prompt">root@sirenko.tech</span>
-			<span className="command"> music --now-playing</span>
+			<span className="command"> music --playing</span>
 		</div>
 
 		<div className="panel-box music-clickable-box"
