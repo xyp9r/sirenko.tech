@@ -88,9 +88,9 @@ a, .email-btn, .menu-list li {
   white-space: pre !important; /* Запрет переносить на новую строку */
   color: #fff;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1;
   margin-bottom: 5px;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .command-line {
