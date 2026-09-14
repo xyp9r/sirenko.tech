@@ -75,7 +75,7 @@ export default function App() {
           
           <div className="info-block">
             <div className="image-placeholder">
-              <img src="/avatar.png" alt="my profile picture" />
+              <img src="/IMG_2220.jpg" alt="my profile picture" />
             </div>
             <div className="bio-text">
             s/e dev / staying lowkey. mostly just keeping uptime high tbh.<br />
