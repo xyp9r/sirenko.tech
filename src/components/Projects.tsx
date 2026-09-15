@@ -90,6 +90,7 @@ export default function Projects({ onBack }: ProjectsProps) {
             <span className="tag">REST API</span>
             <span className="tag">Swagger</span>
             <span className="tag">DTO</span>
+            <span className="tag">CRUD</span>
           </div>
         </div>
 
