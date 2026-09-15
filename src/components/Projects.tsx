@@ -72,9 +72,26 @@ export default function Projects({ onBack }: ProjectsProps) {
           >
             cd ..
           </span>
-          <span style={{ color: '#666', marginLeft: '8px' }}>/projects/total-6</span>
+          <span style={{ color: '#666', marginLeft: '8px' }}>/projects/total-7</span>
         </div>
       </div>
+
+        <div className="project-card">
+          <div className="project-header">
+            <a href="https://github.com/xyp9r/FactorySystem" className="project-name">Factory System Management</a>
+            <span className="project-year">2026</span>
+          </div>
+          <div className="project-desc">A backend for warehouse and personnel management with secure endpoints and advanced relational database support</div>
+          <div className="project-tags">
+            <span className="tag">C#</span>
+            <span className="tag">ASP.NET Core</span>
+            <span className="tag">Entity Framework Core</span>
+            <span className="tag">SQLite</span>
+            <span className="tag">REST API</span>
+            <span className="tag">Swagger</span>
+            <span className="tag">DTO</span>
+          </div>
+        </div>
 
         {/* waterdash - приложуха для отслеживания воды которую ты пьешь (в разработке) */}
         <div className="project-card">
