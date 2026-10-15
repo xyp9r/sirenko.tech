@@ -39,7 +39,7 @@ export default function Projects({ onBack }: ProjectsProps) {
   
   <span className="project-year">2026 june-present</span>
 </div>
-        <div className="project-desc">interning right now / mostly grinding frontend</div>
+        <div className="project-desc">interning right now / fullstack web development & internal tooling</div>
         <div className="project-tags">
           <span className="tag">Wordpress</span>
           <span className="tag">Astra</span>
@@ -49,6 +49,7 @@ export default function Projects({ onBack }: ProjectsProps) {
           <span className="tag">HTML5</span>
           <span className="tag">CSS</span>
           <span className="tag">JavaScript (ES6)</span>
+          <span className="tag">React (no-JSX)</span>
           <span className="tag">Git</span>
           <span className="tag">Podman</span>
           <span className="tag">Python</span>
