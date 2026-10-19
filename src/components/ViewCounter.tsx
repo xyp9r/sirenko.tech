@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Counter } from 'counterapi';
 
 export default function ViewCounter() {
 	const [views, setViews] = useState<string | number>('...');
 
 	useEffect(() => {
-		console.log("Запустился")
 		const fetchViews = async () => {
 			try {
 				// Инициализация клиента
@@ -13,7 +11,6 @@ export default function ViewCounter() {
 
 				const response = await counterClient.up('first-counter-5961');
 
-				console.log("Ответ от сервера:", response);
 				if (response && typeof response.count !== 'undefined') {
 					setViews(response.count);
 				}
