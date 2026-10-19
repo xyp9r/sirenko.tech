@@ -6,22 +6,29 @@ export default function ViewCounter() {
 	useEffect(() => {
 		const fetchViews = async () => {
 			try {
-				// Инициализация клиента
-				const counterClient = new Counter({ workspace: 'sirenkos-team-5961' });
+				// Прямой запрос к вашему воркспейсу и счетчику
+				const response = await fetch('https://counterapi.dev');
 
-				const response = await counterClient.up('first-counter-5961');
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
+				}
 
-				if (response && typeof response.count !== 'undefined') {
-					setViews(response.count);
+				const res = await response.json();
+
+				// Проверяем структуру ответа v2
+				if (res && res.data && typeof res.data.up_count !== 'undefined') {
+					setViews(res.data.up_count);
+				} else if (res && typeof res.count !== 'undefined') {
+					setViews(res.count);
 				}
 			} catch (error) {
-				console.error( 'Ошибка счетчика:' ,error);
+				console.error('Ошибка счетчика:', error);
 				setViews('sys error');
 			}
 		};
 
 		fetchViews();
-	}, []); // Вызываем один раз
+	}, []);
 
-	return <span id="view-count">{views}</span>
+	return <span id="view-count">{views}</span>;
 }
