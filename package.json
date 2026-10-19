@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "counterapi": "^3.1.0",
     "react": "^19.2.4",
     "react-confetti": "^6.4.0",
     "react-dom": "^19.2.4"
