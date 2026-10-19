@@ -1,26 +1,30 @@
 import { useState, useEffect } from 'react';
+import { Counter } from 'counterapi';
 
 export default function ViewCounter() {
-	// Гововим ТS - тут либо строка либо число
 	const [views, setViews] = useState<string | number>('...');
 
 	useEffect(() => {
+		console.log("Запустился")
 		const fetchViews = async () => {
 			try {
-					const response = await fetch('https://api.counterapi.dev/v1/xyp9r-terminal/visits/up');
-					const data = await response.json();
+				// Инициализация клиента
+				const counterClient = new Counter({ workspace: 'sirenkos-team-5961' });
 
-					if (data.count) {
-						setViews(data.count);
-					}
+				const response = await counterClient.up('first-counter-5961');
+
+				console.log("Ответ от сервера:", response);
+				if (response && typeof response.count !== 'undefined') {
+					setViews(response.count);
+				}
 			} catch (error) {
-				console.error('Ошибка счетчика:', error);
+				console.error( 'Ошибка счетчика:' ,error);
 				setViews('sys error');
 			}
 		};
 
 		fetchViews();
-	}, []);
+	}, []); // Вызываем один раз
 
 	return <span id="view-count">{views}</span>
 }
