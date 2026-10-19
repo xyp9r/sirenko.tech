@@ -7,7 +7,7 @@ export default function ViewCounter() {
 		const fetchViews = async () => {
 			try {
 				// Прямой запрос к вашему воркспейсу и счетчику
-				const response = await fetch('https://counterapi.dev');
+				const response = await fetch('https://api.counterapi.dev/v2 /sirenkos-team-5961/first-counter-5961/ up');
 
 				if (!response.ok) {
 					throw new Error(`HTTP error! status: ${response.status}`);
