@@ -85,6 +85,7 @@ export default function Projects({ onBack }: ProjectsProps) {
           <div className="project-desc">A backend for warehouse and personnel management with secure endpoints and advanced relational database support</div>
           <div className="project-tags">
             <span className="tag">C#</span>
+            <span className="tag">.NET 10</span>
             <span className="tag">ASP.NET Core</span>
             <span className="tag">Entity Framework Core</span>
             <span className="tag">SQLite</span>
@@ -92,6 +93,8 @@ export default function Projects({ onBack }: ProjectsProps) {
             <span className="tag">Scalar</span>
             <span className="tag">DTO</span>
             <span className="tag">CRUD</span>
+            <span className="tag">Moq</span>
+            <span className="tag">xUnit</span>
             <span className="tag">JWT Tokens</span>
             <span className="tag">Open API</span>
           </div>
