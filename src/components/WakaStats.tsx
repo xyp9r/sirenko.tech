@@ -28,6 +28,7 @@ interface WakaLanguage {
 interface WakaEditor {
   name: string;
   percent: number;
+  color?: string | null;
 }
 
 // 3. Обертки для ответов от сервера (у всех внутри есть массив data)
@@ -118,7 +119,6 @@ export default function WakaStats({ onBack }: WakaStatsProps) {
     });
   }, []);
 
-  // @ts-ignore
   return (
     <div className="container" style={{ padding: '20px', maxWidth: '850px' }}>
       <div className="terminal-header" style={{ borderBottom: '1px dashed #333', paddingBottom: '10px', marginBottom: '20px' }}>
@@ -127,8 +127,8 @@ export default function WakaStats({ onBack }: WakaStatsProps) {
             className="prompt" 
             onClick={onBack} 
             style={{ cursor: 'pointer', transition: 'color 0.2s' }}
-            onMouseOver={(e) => e.target.style.color = '#fff'}
-            onMouseOut={(e) => e.target.style.color = '#4caf50'}
+            onMouseOver={(e) => e.currentTarget.style.color = '#fff'}
+            onMouseOut={(e) => e.currentTarget.style.color = '#4caf50'}
           >
             cd ..
           </span>
@@ -196,10 +196,40 @@ export default function WakaStats({ onBack }: WakaStatsProps) {
             </div>
             
             {/* БЛОК 3: Инструменты */}
-            {/* TODO: разобраться с тем как красиво поставить IDE где я пишу код / узнать что будет если приложух будет меньше 5 */}
-            <div style={{ color: '#666', fontSize: '12px', marginTop: '10px', padding: '15px', backgroundColor: '#080808', border: '1px dashed #222', borderRadius: '4px' }}>
-              <span style={{ color: '#4caf50' }}>&gt;</span> Editor:
-              <span style={{ color: '#fff', paddingLeft: 'inherit'}}>{stats.editors[0]?.name || 'Unknown'}</span> ({stats.editors[0]?.percent || 0}%)
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: '#666', fontSize: '12px', marginTop: '10px', padding: '15px', backgroundColor: '#080808', border: '1px dashed #222', borderRadius: '4px' }}>
+              <div>
+                <span style={{ color: '#4caf50' }}>&gt;</span> editors:
+              </div>
+
+              {stats.editors.length === 0 ? (
+                <span>no data</span>
+              ) : (
+                <>
+                  <div style={{ display: 'flex', width: '100%', height: '6px', backgroundColor: '#111', borderRadius: '3px', overflow: 'hidden' }}>
+                    {stats.editors.map(ed => (
+                      <div
+                        key={ed.name}
+                        style={{
+                          width: `${ed.percent}%`,
+                          minWidth: '3px',
+                          height: '100%',
+                          backgroundColor: ed.color || '#4caf50'
+                        }}
+                      />
+                    ))}
+                  </div>
+
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
+                    {stats.editors.map(ed => (
+                      <div key={ed.name} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ width: '8px', height: '8px', borderRadius: '2px', backgroundColor: ed.color || '#4caf50', flexShrink: 0 }} />
+                        <span style={{ color: '#fff' }}>{ed.name}</span>
+                        <span style={{ color: '#888' }}>({ed.percent}%)</span>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
           </div>
